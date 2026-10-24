@@ -1,144 +1,176 @@
-# Iris-MultiClass-Classification
+# Machine Learning Projects – Datheon Internship
 
+This repository contains machine learning projects completed as part of the Datheon internship tasks. The projects demonstrate end-to-end machine learning workflows using Python and Scikit-Learn.
 
-Multi-Class Benchmark Classification Pipeline
+---
 
-Project Overview
+## Task 1: Multi-Class Benchmark Classification Pipeline
 
-This project implements an end-to-end multiclass classification pipeline using the Iris dataset and Scikit-Learn.
+### Objective
 
-Two machine learning models are trained and compared:
+Build and evaluate multiclass classification models using the Iris dataset.
 
-Logistic Regression
+### Dataset
 
-Decision Tree Classifier
+The Iris dataset contains 150 samples belonging to three species:
 
-The models are evaluated using accuracy, precision, recall, F1-score, confusion matrices, and ROC curves.
+- Setosa
+- Versicolor
+- Virginica
 
-Dataset
+### Models Used
 
-The Iris dataset contains 150 samples belonging to three classes:
+- Logistic Regression
+- Decision Tree Classifier
 
-Setosa
-
-Versicolor
-
-Virginica
-
-Features
-
-Sepal Length
-
-Sepal Width
-
-Petal Length
-
-Petal Width
-
-Technologies Used
-
-Python
-
-Pandas
-
-NumPy
-
-Scikit-Learn
-
-Matplotlib
-
-Seaborn
-
-Jupyter Notebook
-
-Project Workflow
-
-Load the Iris dataset
-
-Explore and inspect the data
-
-Check missing values
-
-Perform exploratory data analysis
-
-Generate pairplot
-
-Split data into 80% training and 20% testing
-
-Apply StandardScaler
-
-Train Logistic Regression
-
-Train Decision Tree
-
-Generate predictions
-
-Calculate accuracy, precision, recall, and F1-score
-
-Generate confusion matrices
-
-Generate ROC curves
-
-Compare model performance
-
-Visualize the decision boundary
-
-Models
-
-Logistic Regression
-
-Logistic Regression is used as a baseline classification model for predicting Iris species.
-
-Decision Tree
-
-Decision Tree Classifier is used as a second model for comparing classification performance.
-
-Evaluation Metrics
-
-The models are evaluated using:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-Confusion Matrix
-
-ROC Curve
-
-AUC
-
-Results
-
-The performance of both models is presented in the Jupyter Notebook using evaluation metrics, confusion matrices, ROC curves, and comparison graphs.
-
-How to Run
-
-Install the required libraries:
-
-pip install -r requirements.txt
-
-Open the notebook:
-
-jupyter notebook Iris_MultiClass_Classification.ipynb
-
-Run all cells in the notebook to reproduce the results.
-
-Project Structure
-
+### Techniques Used
+
+- 80:20 train-test split
+- StandardScaler
+- Scikit-Learn Pipeline
+- Confusion Matrix
+- Classification Report
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Multiclass ROC Curve
+- AUC analysis
+- Decision boundary visualization
+
+### Task 1 Workflow
+
+```text
+Load Dataset
+     ↓
+Data Exploration
+     ↓
+Train-Test Split
+     ↓
+Feature Scaling
+     ↓
+Logistic Regression / Decision Tree
+     ↓
+Model Evaluation
+     ↓
+Confusion Matrix + ROC Curve
+```
+
+---
+
+## Task 2: Real Estate Housing Price Prediction
+
+### Objective
+
+Predict median house values using the California Housing dataset and compare OLS, Ridge, and Lasso regression models.
+
+### Dataset
+
+California Housing dataset containing housing-related numerical and categorical features.
+
+### Models Used
+
+- OLS (Linear Regression)
+- Ridge Regression (L2)
+- Lasso Regression (L1)
+
+### Techniques Used
+
+- Missing-value imputation
+- Feature engineering
+- Interaction/ratio features
+- One-Hot Encoding
+- StandardScaler
+- 80:20 train-test split
+- Multicollinearity analysis
+- Correlation heatmap
+- GridSearchCV
+- RMSE
+- MAE
+- R²
+- Actual vs Predicted visualization
+- Residual error analysis
+
+### Engineered Features
+
+- `rooms_per_household`
+- `bedrooms_per_room`
+- `population_per_household`
+
+### Task 2 Model Results
+
+| Model | RMSE | MAE | R² |
+|---|---:|---:|---:|
+| OLS | 69127.04 | 49645.49 | 0.6353 |
+| Ridge | 69134.97 | 49652.14 | 0.6353 |
+| Lasso | 69128.09 | 49646.43 | 0.6353 |
+
+For this experiment, OLS achieved the lowest RMSE and MAE among the three models.
+
+### Task 2 Workflow
+
+```text
+Load Housing Dataset
+        ↓
+Data Inspection
+        ↓
+Missing Value Handling
+        ↓
+Correlation Analysis
+        ↓
+Feature Engineering
+        ↓
+Encoding + Scaling
+        ↓
+Train-Test Split
+        ↓
+OLS / Ridge / Lasso
+        ↓
+GridSearchCV
+        ↓
+Model Comparison
+        ↓
+Actual vs Predicted + Residual Analysis
+```
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Jupyter Notebook / Google Colab
+- GitHub
+
+## Repository Structure
+
+```text
 Iris-MultiClass-Classification/
 │
 ├── Iris_MultiClass_Classification.ipynb
+├── Task2_Real_Estate_Housing_Price_Prediction.ipynb
 ├── README.md
-├── requirements.txt
-└── outputs/
-    ├── pairplot.png
-    ├── confusion_matrix_logistic.png
-    ├── confusion_matrix_decision_tree.png
-    ├── model_comparison.png
-    ├── decision_boundary.png
-    └── roc_curve.png
+└── requirements.txt
+```
 
+## How to Run
+
+1. Clone or download this repository.
+2. Install the required Python libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Open the required `.ipynb` notebook using Jupyter Notebook or Google Colab.
+4. Run the cells sequentially.
+
+## Conclusion
+
+These projects demonstrate complete machine learning workflows covering data preprocessing, feature engineering, model training, hyperparameter tuning, evaluation, and visualization.
+
+The projects were developed as part of the Datheon internship deliverables.
